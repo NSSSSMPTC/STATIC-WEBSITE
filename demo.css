@@ -1,0 +1,115 @@
+.header{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(nss/ssm1.jpeg);
+    background-size: cover;
+
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li{
+    float: left;
+}
+
+li a{
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+li a:hover{
+    background-color: #111;
+}
+
+
+.active{
+    background-color: #4400ff;
+}
+
+
+
+.textbox{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.textbox h1{
+    font-size: 50px;
+}
+.textbox p{
+    margin: 1px 0 40px;
+    font-size: 14px;
+    color: #ffff;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 0.6s;
+    
+}
+
+.btn:hover{
+    border: 1px solid#4400ff;
+    background: #4400ff;
+    color: #fff;
+    transition: 0.5s;
+}
+
+@media(max-width :700px){
+
+  
+    .textbox h1{
+        font-size: 20px;
+    }
+
+    .textbox p{
+        font-size: 12px;
+    }
+    ul{
+        position: absolute;
+        
+    }
+
+    ul,li{
+        display: block;
+    }
+    .header{
+        display: flex;
+        background-size: cover;
+        width: 100%;
+        position: static;
+    }
+    .btn{
+        padding: 5px 20px;
+        font-size: 10px;
+    }
+}
+

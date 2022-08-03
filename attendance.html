@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <!-----Designed By ANASUDDEEN PP------>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="attendance.css">
+        <link rel="shortcut icon" href="NSS/nss logo.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>ATTENDANCE FORM</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="heading">ATTENDANCE FORM</div>
+            <form id="submit-form" method="post" action="">
+                <div class="card-details">
+                    <div class="card-box">
+                        <label class="details" for="fname">Full Name</label>
+                        <input type="text" id="fname" name="Full Name" placeholder="Enter Your Name" required>
+
+
+                    </div>
+
+                    <div class="card-box">
+                        <label class="details" for="fname">Unit</label>
+                        <input type="text" id="fname" name="Unit" placeholder="Enter Your Unit" required>
+
+
+                    </div>
+
+                    <div class="card-box">
+                        <label class="details" for="fname">Date</label>
+                        <input type="text" id="fname" name="Date" placeholder="Enter the Date" required>
+
+                        
+                    </div>
+
+                    <div class="card-box">
+                        <label class="details" for="fname">ID Number</label>
+                        <input type="text" id="fname" name="ID Number" placeholder="Enter Your ID Number" required>
+
+                        
+                    </div>
+
+                    <div class="card-box">
+                        <label class="details" for="fname">Branch</label>
+                        <input type="text" id="fname" name="Branch" placeholder="Enter Your Branch" required>
+
+                        
+                    </div>
+
+                    <div class="card-box">
+                        <label class="details" for="fname">Semester</label>
+                        <input type="text" id="fname" name="Semester" placeholder="Enter Your Semester" required>
+
+                        
+                    </div>
+
+                    <div class="card-box">
+                        <label class="details" for="fname">Nature Of Work</label>
+                        <input type="text" id="fname" name="Nature Of Work" placeholder="Orientation/Campus/Community" required>
+
+                        
+                    </div>
+
+                    <div class="card-box">
+                        
+                        <label class="details" for="fname">Working Hour</label>
+                        <input type="text" id="fname" name="Working Hour" placeholder="Enter Your Working Hour" required>
+
+                        
+                    </div>
+
+                    <div class="button">
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            $("#submit-form").submit((e)=>{
+                e.preventDefault()
+                $.ajax({
+                    url:"https://script.google.com/macros/s/AKfycbyP6NAPpqYVkAW2sFD5cqhKCBvcalqVo0UXPEbF/exec",
+                    data:$("#submit-form").serialize(),
+                    method:"post",
+                    success:function (response){
+                        alert("Your Attendance Submitted Successfully")
+                        window.location.reload()
+                        //window.location.href="https://google.com"
+                    },
+                    error:function (err){
+                        alert("Something Wrong, Please Check And Reenter")
+        
+                    }
+                })
+            })
+        </script>
+    </body>
+</html>
